@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Assignment_5</string>
+
+    <string name="snackbar_msg">Ok</string>
+
+    <!--navigation-->
+    <string name="title_forYou">For you</string>
+    <string name="title_nearme">Near me</string>
+    <string name="title_favourite">Favourite</string>
+    <string name="title_drive">Drive</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_more">More</string>
+
+    <!--fragment_foryou-->
+    <string name="lbl">type your location address</string>
+    <string name="fragmentOne">Top Collection</string>
+    <string name="fragmentTwo">Near me</string>
+    <string name="fragmentThree">Low to high price</string>
+
+    <!--fragment_recycler_itemview-->
+    <string name="lbl1">$12,0000</string>
+    <string name="lbl2">West minister, London</string>
+    <string name="lbl3">3200 sqft</string>
+    <string name="lbl4">4 bedrooms</string>
+
+    <!--fragment_detail-->
+    <string name="detail_lbl1">type your location address</string>
+    <string name="detail_lbl2">$12,0000</string>
+    <string name="detail_lbl3">West minister, London</string>
+    <string name="detail_lbl4">3200 sqft</string>
+    <string name="detail_lbl5">4 bedrooms</string>
+    <string name="detail_lbl6">324 Favourite</string>
+    <string name="detail_lbl7">23 Reviews</string>
+    <string name="detail_lbl8">See Review</string>
+    <string name="detail_lbl9">See Photos</string>
+    <string name="detail_lbl10">Single Family House</string>
+    <string name="detail_lbl11">Add Favourite</string>
+    <string name="detail_lbl12">Book Now</string>
+    <string name="detail_lbl13">While owning a single-family home will mean total independence, there are a few factors that can be seen as downsides. Condos, townhouses, or multifamily properties may come with common gyms or pools open to all owners; single-family homes do not usually have community amenities.
+The purchase price of a single-family home tends to be higher, since you are buying an entire lot, says Papoutsakis. That translates into a larger down payment and closing costs as well as recurring expenses like insurance and property taxes.Multifamily residences normally have an R2 rating, which means two residential dwellings can exist on the property, typically in the form of a duplex. And an R3 rating permits multifamily units such as apartments or condominiums.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
