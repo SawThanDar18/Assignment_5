@@ -50,7 +50,6 @@ public class HttpUrlConnectionDataAgentImpl implements EventsDataAgent{
             this.newsResponseDelegate = delegate;
         }
 
-
         @Override
         protected GetEventsResponse doInBackground(Void... voids) {
 
@@ -141,7 +140,13 @@ public class HttpUrlConnectionDataAgentImpl implements EventsDataAgent{
             super.onPostExecute(eventsResponse);
 
             if(eventsResponse != null){
-
+                if (eventsResponse.isResponseOk()){
+                    newsResponseDelegate.onSuccess(eventsResponse.getHotelVOList());
+                }else {
+                    newsResponseDelegate.onFailure(eventsResponse.getMessage());
+                }
+            }else {
+                newsResponseDelegate.onFailure(EventsConstants.EM_NULL_EVENT_RESPONSE);
             }
         }
     }

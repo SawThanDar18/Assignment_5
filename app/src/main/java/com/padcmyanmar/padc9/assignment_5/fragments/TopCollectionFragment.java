@@ -25,7 +25,6 @@ import java.util.List;
 
 public class TopCollectionFragment extends Fragment implements ItemClicked {
 
-
     public TopCollectionFragment() {
     }
 
@@ -50,12 +49,12 @@ public class TopCollectionFragment extends Fragment implements ItemClicked {
         EventModelImpl.getObjInstance().getEvents(new EventModel.GetEventsFromNetworkDelegate() {
             @Override
             public void onSuccess(List<HotelVO> events) {
-                Toast.makeText(getContext(), "Request Success ", Toast.LENGTH_LONG).show();
+                recyclerItemAdapter.setNewData(events);
             }
 
             @Override
             public void onFailure(String errorMessage) {
-                Toast.makeText(getContext(),"Error ",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Error",Toast.LENGTH_LONG).show();
             }
         });
     }

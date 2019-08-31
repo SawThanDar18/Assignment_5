@@ -5,11 +5,16 @@ import android.support.v7.widget.RecyclerView;
 
 import com.padcmyanmar.padc9.assignment_5.views.holders.BaseViewHolder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BaseAdapter<T extends BaseViewHolder<W>, W> extends RecyclerView.Adapter<T> {
 
-    /*private List<W> mData;
+    private List<W> mData;
+
+    public BaseAdapter() {
+        mData = new ArrayList<>();
+    }
 
     @Override
     public void onBindViewHolder(@NonNull T viewHolder, int position) {
@@ -22,7 +27,7 @@ public abstract class BaseAdapter<T extends BaseViewHolder<W>, W> extends Recycl
     }
 
     public void setNewData(List<W> data){
-        mData = data;
+        this.mData = data;
         notifyDataSetChanged();
-    }*/
+    }
 }

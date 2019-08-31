@@ -8,6 +8,6 @@ public abstract class BaseModel {
     protected EventsDataAgent mDataAgent;
 
     BaseModel(){
-        mDataAgent = HttpUrlConnectionDataAgentImpl.getObjInstance();
+        this.mDataAgent = HttpUrlConnectionDataAgentImpl.getObjInstance();
     }
 }

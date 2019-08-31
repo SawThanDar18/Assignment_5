@@ -1,15 +1,43 @@
 package com.padcmyanmar.padc9.assignment_5.data.vos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class HotelVO {
 
+    @SerializedName("id")
+    private int id;
+
+    @SerializedName("house_image_url")
     private String image;
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("description")
     private String description;
+
+    @SerializedName("price")
     private int price;
+
+    @SerializedName("address")
     private String address;
+
+    @SerializedName("square_feet")
     private int square_feet;
+
+    @SerializedName("latitude")
     private double lattitude;
+
+    @SerializedName("longitude")
     private double longitude;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getImage() {
         return image;

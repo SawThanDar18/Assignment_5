@@ -47,10 +47,10 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="@dimen/width_2"
-                        android:layout_height="@dimen/height_2"
+                        android:layout_width="@dimen/width_3"
+                        android:layout_height="@dimen/height_3"
                         android:layout_marginStart="@dimen/margin_3"
-                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginTop="@dimen/margin_3"
                         android:layout_marginBottom="@dimen/margin_3"
                         android:src="@drawable/search"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,14 +58,12 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_3"
-                        android:layout_marginTop="@dimen/margin_3"
                         android:layout_marginBottom="@dimen/margin_3"
-                        android:text="@string/lbl"
-                        android:textSize="17sp"
+                        android:hint="@string/lbl"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"

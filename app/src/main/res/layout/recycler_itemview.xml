@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -27,7 +28,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/house_iv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_4"
                 android:layout_marginStart="@dimen/margin_3"
@@ -49,15 +50,15 @@
                 android:layout_marginEnd="@dimen/margin_3"
                 android:layout_marginBottom="@dimen/margin_4"
                 android:background="@drawable/corner_shape"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintBottom_toBottomOf="@+id/house_iv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0">
 
-                <TextView
-                    android:id="@+id/textView"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/price_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_3"
@@ -84,10 +85,10 @@
                 android:clickable="true"
                 android:src="@drawable/ic_near_me_black_24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="@+id/house_iv"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/house_iv"
                 app:layout_constraintVertical_bias="0.637" />
 
             <ImageView
@@ -96,11 +97,11 @@
                 android:layout_height="@dimen/height_2"
                 android:layout_marginTop="@dimen/margin_4"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/house_iv"
                 app:srcCompat="@drawable/location" />
 
-            <TextView
-                android:id="@+id/textView2"
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/address_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_3"
@@ -126,8 +127,8 @@
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/bedrooms" />
 
-            <TextView
-                android:id="@+id/textView3"
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/square_feet_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_3"
@@ -143,12 +144,12 @@
                 android:layout_width="@dimen/width_1"
                 android:layout_height="@dimen/height_2"
                 android:layout_marginStart="@dimen/margin_6"
-                app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="@+id/textView3"
+                app:layout_constraintBottom_toBottomOf="@+id/square_feet_tv"
+                app:layout_constraintStart_toEndOf="@+id/square_feet_tv"
+                app:layout_constraintTop_toTopOf="@+id/square_feet_tv"
                 app:srcCompat="@drawable/bedrooms" />
 
-            <TextView
+            <org.mmtextview.components.MMTextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
