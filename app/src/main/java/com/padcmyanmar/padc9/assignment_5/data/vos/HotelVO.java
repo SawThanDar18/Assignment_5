@@ -17,13 +17,13 @@ public class HotelVO {
     private String description;
 
     @SerializedName("price")
-    private int price;
+    private long price;
 
     @SerializedName("address")
     private String address;
 
     @SerializedName("square_feet")
-    private int square_feet;
+    private long square_feet;
 
     @SerializedName("latitude")
     private double lattitude;
@@ -63,11 +63,11 @@ public class HotelVO {
         this.description = description;
     }
 
-    public int getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
@@ -79,11 +79,11 @@ public class HotelVO {
         this.address = address;
     }
 
-    public int getSquare_feet() {
+    public long getSquare_feet() {
         return square_feet;
     }
 
-    public void setSquare_feet(int square_feet) {
+    public void setSquare_feet(long square_feet) {
         this.square_feet = square_feet;
     }
 

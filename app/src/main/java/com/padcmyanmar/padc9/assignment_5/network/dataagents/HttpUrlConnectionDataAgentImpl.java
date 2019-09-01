@@ -101,7 +101,7 @@ public class HttpUrlConnectionDataAgentImpl implements EventsDataAgent{
                 return response;
 
             } catch (Exception e){
-
+              e.printStackTrace();
             }finally {
                 //close the reader; this can throw an exception too, so
                 //wrap it in another try/catch block.

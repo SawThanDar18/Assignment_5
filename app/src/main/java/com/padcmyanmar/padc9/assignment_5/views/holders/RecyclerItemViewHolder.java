@@ -49,8 +49,8 @@ public class RecyclerItemViewHolder extends BaseViewHolder<HotelVO> {
         Glide.with(itemView)
                 .load(data.getImage())
                 .into(house_iv);
-        price_tv.setText(data.getPrice());
+        price_tv.setText(String.valueOf(data.getPrice()));
         address_tv.setText(data.getAddress());
-        square_feet_tv.setText(data.getSquare_feet());
+        square_feet_tv.setText(String.valueOf(data.getSquare_feet()));
     }
 }
