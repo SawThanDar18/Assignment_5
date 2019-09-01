@@ -6,21 +6,11 @@ import com.google.gson.Gson;
 import com.padcmyanmar.padc9.assignment_5.network.responses.GetEventsResponse;
 import com.padcmyanmar.padc9.assignment_5.utils.EventsConstants;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HttpUrlConnectionDataAgentImpl implements EventsDataAgent{
 

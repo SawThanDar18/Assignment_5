@@ -10,7 +10,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/height_5"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -25,18 +25,18 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/toolbar_height"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="@dimen/height"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageView2">
+                    app:layout_constraintTop_toTopOf="@+id/back_iv">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                             android:src="@drawable/ic_navigate_before_black_24dp" />
 
                         <android.support.v7.widget.CardView
-                            android:layout_width="60dp"
+                            android:layout_width="@dimen/width"
                             android:layout_height="wrap_content"
                             app:cardBackgroundColor="@color/background"
                             android:layout_weight="6">
@@ -136,7 +136,6 @@
                 android:elevation="@dimen/margin_3"
                 app:cardCornerRadius="@dimen/margin_4"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintVertical_bias="1.0">
