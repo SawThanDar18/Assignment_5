@@ -13,7 +13,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample);
+        setContentView(R.layout.activity_detail);
 
         ImageView back_iv = findViewById(R.id.back_iv);
         back_iv.setOnClickListener(new View.OnClickListener() {
