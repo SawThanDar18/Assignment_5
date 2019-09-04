@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.padcmyanmar.padc9.assignment_5.ItemClicked;
+import com.padcmyanmar.padc9.assignment_5.delegates.ItemClicked;
 import com.padcmyanmar.padc9.assignment_5.R;
 import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
 import com.padcmyanmar.padc9.assignment_5.views.holders.RecyclerItemViewHolder;

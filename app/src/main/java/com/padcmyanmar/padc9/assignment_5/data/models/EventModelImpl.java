@@ -43,4 +43,9 @@ public class EventModelImpl extends BaseModel implements EventModel{
         });
     }
 
+    @Override
+    public HotelVO findEventById(int hotelId) {
+        HotelVO hotelVO = eventsDataRepository.get(hotelId);
+        return hotelVO;
+    }
 }

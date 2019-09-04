@@ -8,6 +8,8 @@ public interface EventModel {
 
     void getEvents(GetEventsFromNetworkDelegate delegate);
 
+    HotelVO findEventById(int hotelId);
+
     interface GetEventsFromNetworkDelegate{
         void onSuccess(List<HotelVO> events);
         void onFailure(String errorMessage);
