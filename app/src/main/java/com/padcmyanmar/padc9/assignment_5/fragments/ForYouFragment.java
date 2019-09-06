@@ -1,33 +1,29 @@
 package com.padcmyanmar.padc9.assignment_5.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.padcmyanmar.padc9.assignment_5.R;
-import com.padcmyanmar.padc9.assignment_5.activities.DetailsActivity;
-import com.padcmyanmar.padc9.assignment_5.adapters.RecyclerItemAdapter;
 import com.padcmyanmar.padc9.assignment_5.adapters.TabPagerAdapter;
 import com.padcmyanmar.padc9.assignment_5.data.models.EventModel;
-import com.padcmyanmar.padc9.assignment_5.data.models.EventModelImpl;
 import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
-import com.padcmyanmar.padc9.assignment_5.delegates.ItemClicked;
 
-import java.util.List;
+public class ForYouFragment extends Fragment {
 
-public class ForYouFragment extends Fragment implements ItemClicked {
-
+    EditText search_et;
 
     public ForYouFragment() {
     }
@@ -50,28 +46,46 @@ public class ForYouFragment extends Fragment implements ItemClicked {
         viewPager.setAdapter(tabPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        final RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false));
+        search_et = view.findViewById(R.id.search_et);
 
-        final RecyclerItemAdapter recyclerItemAdapter = new RecyclerItemAdapter(this);
-        recyclerView.setAdapter(recyclerItemAdapter);
-
-        EventModelImpl.getObjInstance().getEvents(new EventModel.GetEventsFromNetworkDelegate() {
+        search_et.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public void onSuccess(List<HotelVO> events) {
-                recyclerItemAdapter.setNewData(events);
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_SEARCH) {
+
+                }
+                return false;
+            }
+        });
+
+        search_et.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode == KeyEvent.KEYCODE_DEL) {
+                }
+                return false;
+            }
+        });
+
+        search_et.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
             }
 
             @Override
-            public void onFailure(String errorMessage) {
-                Toast.makeText(getContext(),"Error",Toast.LENGTH_LONG).show();
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchByKeyWord(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
     }
 
-    @Override
-    public void onClicked(int hotelId) {
-        Intent intent = DetailsActivity.newIntent(getContext(), hotelId);
-        startActivity(intent);
+    private void searchByKeyWord(String keyword){
+        keyword = search_et.getText().toString();
+        //if(keyword.toLowerCase().contains())
     }
 }

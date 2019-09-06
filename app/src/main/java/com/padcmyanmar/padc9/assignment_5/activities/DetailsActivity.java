@@ -10,11 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.GoogleMap;
 import com.padcmyanmar.padc9.assignment_5.R;
 import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
-
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,8 +47,6 @@ public class DetailsActivity extends BaseActivity {
     @BindView(R.id.map_fb)
     FloatingActionButton map_fb;
 
-    private GoogleMap googleMap;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +66,20 @@ public class DetailsActivity extends BaseActivity {
 
         final HotelVO hotelVO = eventModel.findEventById(hotelId);
         bindData(hotelVO);
+
+        map_fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String  lattitude = String.valueOf(hotelVO.getLattitude());
+                String  longitude = String.valueOf(hotelVO.getLongitude());
+                String openInMapPrefix = "google.navigation:q=" + lattitude + "," + longitude;
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(openInMapPrefix));
+                if(intent.resolveActivity(getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private void bindData(HotelVO hotelVO){

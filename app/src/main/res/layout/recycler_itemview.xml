@@ -103,7 +103,7 @@
             <org.mmtextview.components.MMTextView
                 android:id="@+id/address_tv"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_2"
                 android:layout_marginStart="@dimen/margin_3"
                 android:layout_marginEnd="@dimen/margin_3"
                 android:text="@string/lbl2"
@@ -130,7 +130,7 @@
             <org.mmtextview.components.MMTextView
                 android:id="@+id/square_feet_tv"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_2"
                 android:layout_marginStart="@dimen/margin_3"
                 android:text="@string/lbl3"
                 android:textColor="@color/black"
@@ -152,7 +152,7 @@
             <org.mmtextview.components.MMTextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_2"
                 android:layout_marginStart="@dimen/margin_3"
                 android:layout_marginEnd="@dimen/margin_3"
                 android:text="@string/lbl4"

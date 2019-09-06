@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
 
 import java.util.List;
 
-public class TopCollectionFragment extends Fragment{
+public class TopCollectionFragment extends Fragment implements ItemClicked{
 
     public TopCollectionFragment() {
     }
@@ -40,28 +41,28 @@ public class TopCollectionFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        final RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false));
-//
-//        final RecyclerItemAdapter recyclerItemAdapter = new RecyclerItemAdapter(this);
-//        recyclerView.setAdapter(recyclerItemAdapter);
-//
-//        EventModelImpl.getObjInstance().getEvents(new EventModel.GetEventsFromNetworkDelegate() {
-//            @Override
-//            public void onSuccess(List<HotelVO> events) {
-//                recyclerItemAdapter.setNewData(events);
-//            }
-//
-//            @Override
-//            public void onFailure(String errorMessage) {
-//                Toast.makeText(getContext(),"Error",Toast.LENGTH_LONG).show();
-//            }
-//        });
+        final RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false));
+
+        final RecyclerItemAdapter recyclerItemAdapter = new RecyclerItemAdapter(this);
+        recyclerView.setAdapter(recyclerItemAdapter);
+
+        EventModelImpl.getObjInstance().getEvents(new EventModel.GetEventsFromNetworkDelegate() {
+            @Override
+            public void onSuccess(List<HotelVO> events) {
+                recyclerItemAdapter.setNewData(events);
+            }
+
+            @Override
+            public void onFailure(String errorMessage) {
+                Toast.makeText(getContext(),"Error",Toast.LENGTH_LONG).show();
+            }
+        });
     }
-//
-//    @Override
-//    public void onClicked(int hotelId) {
-//        Intent intent = DetailsActivity.newIntent(getContext(), hotelId);
-//        startActivity(intent);
-//    }
+
+    @Override
+    public void onClicked(int hotelId) {
+        Intent intent = DetailsActivity.newIntent(getContext(), hotelId);
+        startActivity(intent);
+    }
 }
