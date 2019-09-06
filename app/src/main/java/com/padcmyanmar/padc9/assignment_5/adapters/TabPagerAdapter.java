@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.padcmyanmar.padc9.assignment_5.fragments.TopCollectionFragment;
+import com.padcmyanmar.padc9.assignment_5.fragments.Fragments;
 
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -16,10 +16,10 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int i) {
         if(i == 0){
-            return new TopCollectionFragment();
+            return new Fragments();
         }else if(i == 1){
-            return new TopCollectionFragment();
-        }else return new TopCollectionFragment();
+            return new Fragments();
+        }else return new Fragments();
     }
 
     @Override

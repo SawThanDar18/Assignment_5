@@ -48,7 +48,7 @@ public class RecyclerItemViewHolder extends BaseViewHolder<HotelVO> {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemClicked.onClicked(mData.getId());
+                itemClicked.onClickedItem(mData.getId());
             }
         });
 
