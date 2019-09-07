@@ -170,7 +170,8 @@
                         app:layout_constraintStart_toEndOf="@+id/detail_price_tv"
                         app:layout_constraintTop_toTopOf="@+id/detail_price_tv"
                         app:layout_constraintVertical_bias="0.0"
-                        app:srcCompat="@drawable/ic_near_me_black_24dp" />
+                        app:srcCompat="@drawable/ic_near_me_black_24dp"
+                        android:backgroundTint="@color/white"/>
 
                     <ImageView
                         android:id="@+id/imageView8"
@@ -370,38 +371,64 @@
 
                 </android.support.constraint.ConstraintLayout>
 
-                <org.mmtextview.components.MMTextView
-                    android:id="@+id/detail_name_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_4"
-                    android:layout_marginTop="@dimen/margin_4"
-                    android:layout_marginEnd="@dimen/margin_3"
-                    android:text="@string/detail_lbl10"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_3"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <org.mmtextview.components.MMTextView
-                    android:id="@+id/detail_description_tv"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_4"
-                    android:layout_marginTop="@dimen/margin_4"
-                    android:layout_marginEnd="@dimen/margin_4"
-                    android:layout_marginBottom="@dimen/margin_3"
-                    android:text="@string/detail_lbl13"
-                    android:textSize="@dimen/text_1"
-                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/detail_name_tv"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout6"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/constraintLayout6"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <org.mmtextview.components.MMTextView
+                            android:id="@+id/detail_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:layout_marginEnd="@dimen/margin_3"
+                            android:text="@string/detail_lbl10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_3"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <org.mmtextview.components.MMTextView
+                            android:id="@+id/detail_description_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:layout_marginEnd="@dimen/margin_4"
+                            android:layout_marginBottom="@dimen/margin_3"
+                            android:text="@string/detail_lbl13"
+                            android:textSize="@dimen/text_1"
+                            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/detail_name_tv"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </ScrollView>
 
             </android.support.constraint.ConstraintLayout>
 
@@ -409,23 +436,23 @@
     </android.support.v4.widget.NestedScrollView>
 
     <Button
-        android:layout_width="@dimen/width_4"
-        android:layout_height="@dimen/height_3"
+        android:layout_width="@dimen/width_6"
+        android:layout_height="wrap_content"
         android:layout_gravity="left|bottom"
-        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_4"
         android:layout_marginBottom="@dimen/margin_3"
         android:background="@drawable/shape_2"
         android:text="@string/detail_lbl11"
-        android:textSize="@dimen/text"/>
+        android:textSize="@dimen/text_1"/>
 
     <Button
-        android:layout_width="@dimen/width_4"
-        android:layout_height="@dimen/height_3"
+        android:layout_width="@dimen/width_6"
+        android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
-        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_4"
         android:layout_marginBottom="@dimen/margin_3"
         android:background="@drawable/shape_3"
         android:text="@string/detail_lbl12"
-        android:textSize="@dimen/text"/>
+        android:textSize="@dimen/text_1"/>
 
 </android.support.design.widget.CoordinatorLayout>

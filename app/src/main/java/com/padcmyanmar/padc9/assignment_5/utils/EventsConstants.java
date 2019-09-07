@@ -14,7 +14,11 @@ public class EventsConstants {
 
     //Error message
     public static final String EM_NULL_EVENT_RESPONSE = "Check Internet Connection";
+    public static final String EM_EVENT_MODEL_NOT_INITIALIZED = "Event Model should not have been initialied";
 
     //Response Code
     public static final int CODE_RESPONSE_OK = 200;
+
+    //DB Name
+    public static final String HOTEL_DB = "HotelDB";
 }

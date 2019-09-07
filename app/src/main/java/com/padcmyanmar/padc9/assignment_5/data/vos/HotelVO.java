@@ -1,35 +1,62 @@
 package com.padcmyanmar.padc9.assignment_5.data.vos;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Index;
+import android.arch.persistence.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
+@Entity(tableName = "hotel", indices = @Index(value = "id", unique = true))
 public class HotelVO {
 
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "hotel_id_pk")
+    private int hotelIdPK;
+
     @SerializedName("id")
+    @ColumnInfo(name = "id")
     private int id;
 
     @SerializedName("house_image_url")
+    @ColumnInfo(name = "house_image_url")
     private String image;
 
     @SerializedName("name")
+    @ColumnInfo(name = "name")
     private String name;
 
     @SerializedName("description")
+    @ColumnInfo(name = "description")
     private String description;
 
     @SerializedName("price")
+    @ColumnInfo(name = "price")
     private long price;
 
     @SerializedName("address")
+    @ColumnInfo(name = "address")
     private String address;
 
     @SerializedName("square_feet")
+    @ColumnInfo(name = "square_feet")
     private long square_feet;
 
     @SerializedName("latitude")
+    @ColumnInfo(name = "latitude")
     private double lattitude;
 
     @SerializedName("longitude")
+    @ColumnInfo(name = "longitude")
     private double longitude;
+
+    public int getHotelIdPK() {
+        return hotelIdPK;
+    }
+
+    public void setHotelIdPK(int hotelIdPK) {
+        this.hotelIdPK = hotelIdPK;
+    }
 
     public int getId() {
         return id;

@@ -14,7 +14,10 @@ import android.widget.ImageView;
 import com.padcmyanmar.padc9.assignment_5.R;
 import com.padcmyanmar.padc9.assignment_5.adapters.TabPagerAdapter;
 import com.padcmyanmar.padc9.assignment_5.data.models.EventModel;
+import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
 import com.padcmyanmar.padc9.assignment_5.delegates.ItemClicked;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -101,6 +104,17 @@ public class MainActivity extends BaseActivity implements ItemClicked {
             @Override
             public void onClick(View v) {
                 layoutManagerDelegate.onChangeToGridLayout();
+            }
+        });
+    }
+
+    @Override
+    public void searchByName(final SearchDelegate searchDelegate) {
+        search_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<HotelVO> hotelVOList =  eventModel.searchByName(search_et.getText().toString());
+                searchDelegate.searchSuccess(hotelVOList);
             }
         });
     }

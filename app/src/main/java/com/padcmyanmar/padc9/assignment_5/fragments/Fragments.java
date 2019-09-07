@@ -66,6 +66,13 @@ public class Fragments extends Fragment{
                 recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
             }
         });
+
+        itemClicked.searchByName(new ItemClicked.SearchDelegate() {
+            @Override
+            public void searchSuccess(List<HotelVO> hotelVOS) {
+                recyclerItemAdapter.setNewData(hotelVOS);
+            }
+        });
     }
 
     @Override

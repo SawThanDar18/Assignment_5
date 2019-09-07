@@ -7,8 +7,8 @@ import java.util.List;
 public interface EventModel {
 
     void getEvents(GetEventsFromNetworkDelegate delegate);
-
     HotelVO findEventById(int hotelId);
+    List<HotelVO> searchByName(String name);
 
     interface GetEventsFromNetworkDelegate{
         void onSuccess(List<HotelVO> events);
