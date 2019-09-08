@@ -72,10 +72,10 @@ public class DetailsActivity extends BaseActivity {
             public void onClick(View v) {
                 String  lattitude = String.valueOf(hotelVO.getLattitude());
                 String  longitude = String.valueOf(hotelVO.getLongitude());
-                String openInMapPrefix = lattitude + "," + longitude;
+                String openInMapPrefix = "google.navigation:q=" + lattitude + "," + longitude;
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.google.com/maps/dir/?api=1&destination=" + openInMapPrefix +"&travelmode=driving"));
-                if(intent.resolveActivity(getPackageManager()) != null){
+                intent.setData(Uri.parse(openInMapPrefix));
+                if(intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
             }

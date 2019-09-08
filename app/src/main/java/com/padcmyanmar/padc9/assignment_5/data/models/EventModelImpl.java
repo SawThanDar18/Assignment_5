@@ -60,7 +60,8 @@ public class EventModelImpl extends BaseModel implements EventModel{
 
     @Override
     public HotelVO findEventById(int hotelId) {
-        HotelVO hotelVO = eventsDataRepository.get(hotelId);
+        //HotelVO hotelVO = eventsDataRepository.get(hotelId);
+        HotelVO hotelVO = mDatabase.hotelDao().getHotelById(hotelId);
         return hotelVO;
     }
 

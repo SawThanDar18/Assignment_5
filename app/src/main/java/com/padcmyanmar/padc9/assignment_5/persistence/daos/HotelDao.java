@@ -17,4 +17,7 @@ public interface HotelDao {
 
     @Query("SELECT * FROM hotel")
     List<HotelVO> getAll();
+
+    @Query("SELECT * FROM hotel where id = :id")
+    HotelVO getHotelById(int id);
 }

@@ -9,7 +9,7 @@ public class EventsConstants {
     public static final String PARAM_ACCESS_TOKEN = "access_token";
 
     //URL
-    public static final String BASE_URL = "https://2d14f6f1-dfb9-49a0-b4ed-288cb1b0d585.mock.pstmn.io";
+    public static final String BASE_URL = "https://ba610f96-cab6-41ab-94f1-cbc2fca9460b.mock.pstmn.io";
     public static final String GET_EVENTS = "/getAllHouses";
 
     //Error message
