@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.padcmyanmar.padc9.assignment_5.R;
 import com.padcmyanmar.padc9.assignment_5.data.vos.HotelVO;
 
@@ -26,8 +27,8 @@ public class DetailsActivity extends BaseActivity {
         return intent;
     }
 
-    /*@BindView(R.id.detail_image)
-    ImageView detail_image;*/
+    @BindView(R.id.detail_iv)
+    ImageView detail_image;
 
     @BindView(R.id.detail_price_tv)
     TextView detail_price_tv;
@@ -83,7 +84,7 @@ public class DetailsActivity extends BaseActivity {
     }
 
     private void bindData(HotelVO hotelVO){
-        //Glide.with(detail_image).load(hotelVO.getImage()).into(detail_image);
+        Glide.with(detail_image).load(hotelVO.getImage()).into(detail_image);
         detail_price_tv.setText(String.valueOf(hotelVO.getPrice()));
         detail_address_tv.setText(hotelVO.getAddress());
         detail_sqft_tv.setText(String.valueOf(hotelVO.getSquare_feet()));
